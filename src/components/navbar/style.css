@@ -1,0 +1,56 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu-btn {
+  display: none; /* Hide menu button by default on larger screens */
+}
+
+.menu-btn-burger {
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  margin-bottom: 6px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block; /* Show menu button on smaller screens */
+    cursor: pointer;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide menu by default on smaller screens */
+  }
+
+  .menu.open {
+    display: flex; /* Show menu when open on smaller screens */
+  }
+}
